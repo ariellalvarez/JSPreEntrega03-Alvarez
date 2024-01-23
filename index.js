@@ -33,8 +33,12 @@ let id = 0
 botonCalcular.addEventListener("click",()=>{
     cuota = monto * (1 + interes/100) / cuotas
     console.log(cuota)
-    divResultado.innerHTML = `<h2> 
+    divResultado.innerHTML = `<h2>
+    <br>
     Son ${cuotas} cuotas de ${cuota} pesos
+    <br>
+    El monto total con interes a pagar es ${cuota * cuotas} pesos
+
     
     </h2>`
     id = id + 1
@@ -75,7 +79,7 @@ botonCalcularMenorCuota.addEventListener("click",()=>{
 
     }
 
-
+    let montoTotal = calcMinObjeto.cuotas * calcMinObjeto.cuota
 
     divJSONCuota.innerHTML = `<h2>
     
@@ -86,7 +90,9 @@ botonCalcularMenorCuota.addEventListener("click",()=>{
     <br>
     Cuotas: ${calcMinObjeto.cuotas}
     <br>
-    Interes: ${calcMinObjeto.interes} 
+    Interes: ${calcMinObjeto.interes}
+    <br>
+    El monto total con interes a pagar es ${montoTotal} pesos
  
     
     </h2>`
